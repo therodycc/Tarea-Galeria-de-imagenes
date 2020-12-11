@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+ /*   background: #000000;  /* fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, hsla(0, 0%, 0%, 0.39), hsla(0, 0%, 0%, 0.411)), url(images/fondo.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, hsla(0, 0%, 0%, 0.418), hsla(0, 0%, 0%, 0.363)), url(images/fondo.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-image:  url(images/fondo.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.contenido-galeria{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+.imagenes{
+    width:45%;
+    height: 250px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.imagenes .img-galeria{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.texo-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color:#dadada;
+    margin-top: 60px;
+    font-family: 'Sansita Swashed', cursive;
+text-shadow:  0 0 15px rgba(0, 0, 0, 0.74);
+ 
+}
+
+.texo-inicio i{
+    font-size: 100px;
+    margin-right: 20px;
+    color: rgb(15, 25, 155);
+    text-shadow:  0 0 6px rgba(255, 255, 255, 0.74);
+}
+
+
+.parte{
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/**************************************************************************/
+
+
+.imagen-light{
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: .5s ease all;
+}
+
+.show{
+    transform: translate(0);
+}
+
+.agregar-imagen{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.showImage{
+    transform: scale(1);
+}
+
+.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #f2f2f254;
+    padding: 15px;
+}
